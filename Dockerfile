@@ -32,7 +32,7 @@ RUN useradd -m -s /bin/bash user && \
     mkdir -p /steam /home/user
 
 # Step 4: Install websockify + noVNC
-RUN pip3 install --break-system-packages websockify && \
+RUN pip3 install websockify && \
     git clone --depth 1 https://github.com/novnc/noVNC.git /opt/noVNC && \
     ln -sf /opt/noVNC/vnc.html /opt/noVNC/index.html
 
